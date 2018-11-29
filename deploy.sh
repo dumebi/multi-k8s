@@ -1,6 +1,6 @@
-docker build -t dyke2010/multi-client:latest -t dyke2010/multi-client:$SHA ./client/Dockerfile ./client
-docker build -t dyke2010/multi-server:latest -t dyke2010/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t dyke2010/multi-worker:latest -t dyke2010/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t dyke2010/multi-client:latest -t dyke2010/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t dyke2010/multi-server:latest -t dyke2010/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t dyke2010/multi-worker:latest -t dyke2010/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push dyke2010/multi-client:latest
 docker push dyke2010/multi-server:latest
